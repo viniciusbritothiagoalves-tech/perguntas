@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Um passo importante - Cuidado e Constância</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="progress-bar-container">
+        <div class="progress-bar" id="progress-bar"></div>
+    </div>
+
+    <main class="app-container">
+        
+        <!-- Passo 1: ABERTURA -->
+        <section class="step active" id="step-1">
+            <div class="content-wrapper">
+                <div class="icon-container">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" class="gold-icon"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <h1 class="title">É um prazer ter você aqui.</h1>
+                <p class="description">Antes de continuar te enviando as mensagens, eu precisei organizar melhor a forma como estou cuidando disso…</p>
+                <p class="description">porque muitas pessoas começaram a chegar, e eu não quero fazer algo de qualquer jeito.</p>
+                <p class="description highlight">Esse passo rápido aqui é só pra entender como te ajudar da forma certa, com cuidado e responsabilidade.</p>
+                
+                <button class="btn-primary mt-large" onclick="nextStep(2)">👉 Continuar</button>
+            </div>
+        </section>
+
+        <!-- Passo 2: IDENTIFICAÇÃO EMOCIONAL (MAPEAR PROBLEMAS) -->
+        <section class="step" id="step-2">
+            <div class="content-wrapper">
+                <h2 class="question">Nos últimos dias, o que mais tem pesado no seu coração?</h2>
+                <div class="options-container">
+                    <button class="btn-option" onclick="selectOption(this, 2, 3)">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="option-icon"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                        Preocupações com a família
+                    </button>
+                    <button class="btn-option" onclick="selectOption(this, 2, 3)">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="option-icon"><path d="M2 12h4l3-9 5 18 3-9h5"></path></svg>
+                        Ansiedade / mente inquieta
+                    </button>
+                    <button class="btn-option" onclick="selectOption(this, 2, 3)">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="option-icon"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+                        Problemas de saúde
+                    </button>
+                    <button class="btn-option" onclick="selectOption(this, 2, 3)">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="option-icon"><circle cx="12" cy="12" r="10"></circle><path d="M12 8v4l3 3"></path></svg>
+                        Cansaço emocional
+                    </button>
+                    <button class="btn-option" onclick="selectOption(this, 2, 3)">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="option-icon"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="M4.93 4.93l1.41 1.41"></path><path d="M17.66 17.66l1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="M4.93 19.07l1.41-1.41"></path><path d="M17.66 6.34l1.41-1.41"></path></svg>
+                        Buscando mais paz no dia a dia
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Passo 3: FREQUÊNCIA / NECESSIDADE -->
+        <section class="step" id="step-3">
+            <div class="content-wrapper">
+                <h2 class="question">Essas mensagens de conforto… você sente que sua mente precisa delas:</h2>
+                <div class="options-container">
+                    <button class="btn-option" onclick="selectOption(this, 3, 4)">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="option-icon"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                        Todos os dias, como um alimento
+                    </button>
+                    <button class="btn-option" onclick="selectOption(this, 3, 4)">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="option-icon"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                        Com frequência durante a semana
+                    </button>
+                    <button class="btn-option" onclick="selectOption(this, 3, 4)">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="option-icon"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg>
+                        Só em momentos muito difíceis
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Passo 4: COMPORTAMENTO -->
+        <section class="step" id="step-4">
+            <div class="content-wrapper">
+                <h2 class="question">Hoje, você consegue separar um momento tranquilo para ouvir algo que acalme sua mente?</h2>
+                <div class="options-container">
+                    <button class="btn-option" onclick="selectOption(this, 4, 5)">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="option-icon"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        Sim, faço questão disso
+                    </button>
+                    <button class="btn-option" onclick="selectOption(this, 4, 5)">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="option-icon"><polyline points="1 4 1 10 7 10"></polyline><polyline points="23 20 23 14 17 14"></polyline><path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10M22 14l-4.64 4.36A9 9 0 0 1 3.51 15"></path></svg>
+                        Às vezes, quando a rotina deixa
+                    </button>
+                    <button class="btn-option" onclick="selectOption(this, 4, 5)">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="option-icon"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
+                        Raramente, me sinto sem tempo
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Passo 5: NOTÍCIA / IMAGEM (SEM OPÇÕES) -->
+        <section class="step" id="step-5">
+            <div class="content-wrapper text-center">
+                <img src="noticia.jpg" alt="Notícia sobre saúde mental" onerror="this.src='https://placehold.co/400x200/1E2226/E5B760?text=Estudos+Comprovam'" style="width: 100%; max-width: 350px; display: block; margin: 0 auto 2rem auto; border-radius: var(--border-radius-sm); box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+                
+                <button class="btn-primary" onclick="nextStep(6)">
+                    👉 Continuar
+                </button>
+            </div>
+        </section>
+
+        <!-- Passo 6: VALORIZAÇÃO -->
+        <section class="step" id="step-6">
+            <div class="content-wrapper">
+                <h2 class="question">Sabendo do bem que isso te faz, se houvesse um lugar organizado só para receber essa paz todos os dias... você honraria isso?</h2>
+                <div class="options-container">
+                    <button class="btn-option" onclick="selectOption(this, 6, 7)">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="option-icon"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg>
+                        Sim, eu faria questão de estar lá
+                    </button>
+                    <button class="btn-option" onclick="selectOption(this, 6, 7)">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="option-icon"><circle cx="12" cy="12" r="10"></circle><path d="M8 12h8"></path></svg>
+                        Teria que ver como funciona primeiro
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Passo 7: TRANSIÇÃO -->
+        <section class="step" id="step-7">
+            <div class="content-wrapper">
+                <div class="icon-container">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="gold-icon"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                </div>
+                <p class="description fade-in-delay-1">Eu precisei tomar uma decisão importante.</p>
+                <p class="description fade-in-delay-2">A mensagem de fé e paz é gratuita e sempre será. O dom de Deus não se vende.</p>
+                <p class="description fade-in-delay-3 highlight">Porém, para organizar um sistema que envie as mensagens todos os dias, sem falhar, para centenas de pessoas, precisei contratar uma <strong>ferramenta de tecnologia.</strong></p>
+                <p class="description fade-in-delay-4">A mensalidade dessa estrutura de envios é alta e sairia toda do meu bolso.</p>
+                <button class="btn-primary fade-in-delay-5" style="margin-top:2rem;" onclick="nextStep(8)">👉 Entendi, continue</button>
+            </div>
+        </section>
+
+        <!-- Passo 8: FILTRO DE COMPROMISSO (VALOR JUSTO SEM R$) -->
+        <section class="step" id="step-8">
+            <div class="content-wrapper">
+                <p class="description txt-center" style="margin-bottom:2rem;">Algumas pessoas me disseram que ajudariam com 60 ou até 100 por mês para garantir que esse trabalho continuasse vivo.</p>
+                
+                <div class="logic-box" style="margin-bottom:2rem;">
+                    <p style="color:var(--text-main);">Mas eu não quis pesar para ninguém. Apenas defini que essa pequena colaboração seja dividida coletivamente a cada mês.</p>
+                </div>
+
+                <h2 class="question" style="font-size: 1.3rem;">Se precisasse de uma <strong>ajuda simbólica de apenas 15 por mês</strong> para custear o sistema e você ter seu espaço lá dentro todos os dias... você colaboraria com gratidão?</h2>
+
+                <div class="options-container">
+                    <button class="btn-option" onclick="selectOption(this, 8, 9)">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="option-icon" style="color:#10B981;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                        Sim, colaboro com alegria!
+                    </button>
+                    <!-- SE A PESSOA DIZER NÃO, VAI PARA O RECOVERY ('recovery-1') -->
+                    <button class="btn-option" onclick="selectOption(this, 8, 'recovery-1')">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="option-icon" style="color:var(--text-muted);"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                        Não valorizo, prefiro não participar
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Passo 8B: RECUPERAÇÃO DE CONSCIÊNCIA (Se a pessoa disse NÃO) -->
+        <section class="step" id="step-recovery-1">
+            <div class="content-wrapper">
+                <div class="icon-container">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="gold-icon"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg>
+                </div>
+                <p class="description txt-center" style="margin-bottom:1rem;">Eu entendo completamente. Às vezes parece apenas mais um custo no meio de tantos que temos hoje.</p>
+                <p class="description txt-center highlight" style="margin-bottom:1rem;">Mas o que estamos falando aqui não é sobre gastar 15.</p>
+                <p class="description txt-center" style="margin-bottom:2rem;">Muitas vezes investimos valores maiores em coisas passageiras, mas hesitamos quando se trata de algo constante para o bem da nossa própria mente e da nossa família.</p>
+                
+                <h2 class="question" style="font-size: 1.3rem;">Faz sentido para você que manter essa estrutura viva é um bem maior e que os 15 são apenas uma doação para a ferramenta funcionar?</h2>
+
+                <div class="options-container">
+                    <!-- ACEITOU NA RECUPERAÇÃO -> VAI PARA 9 -->
+                    <button class="btn-option" onclick="selectOption(this, 'recovery-1', 9)">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="option-icon" style="color:#10B981;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                        Faz sentido. Eu quero ajudar com os 15
+                    </button>
+                    <!-- CONTINUA RECUSANDO -> VAI PARA SAÍDA DEFINITIVA ('exit') -->
+                    <button class="btn-option" onclick="selectOption(this, 'recovery-1', 'exit')">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="option-icon" style="color:var(--text-muted);"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                        Ainda não faz sentido / Não posso mesmo
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Passo 11: SAÍDA DEFINITIVA (Se a pessoa disse NÃO duas vezes) -->
+        <section class="step" id="step-exit">
+            <div class="content-wrapper text-center">
+                <div class="icon-container">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="gold-icon"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                </div>
+                <h1 class="title" style="margin-bottom:1rem;">Tudo bem!</h1>
+                <p class="description txt-center" style="margin-bottom:1rem;">A sua paz não tem preço, e o nosso carinho por você continua exatamente o mesmo.</p>
+                <p class="description txt-center" style="margin-bottom:1rem;">Agradeço de coração pelo seu tempo até aqui. A plataforma será estruturada apenas com as colaborações de quem pôde ajudar neste momento.</p>
+                <p class="description txt-center highlight">Você sempre será muito bem-vindo aqui!</p>
+            </div>
+        </section>
+
+        <!-- Passo 9: ANALISANDO TRANSIÇÃO -->
+        <section class="step" id="step-9">
+            <div class="content-wrapper text-center">
+                <div class="loader-container" id="analyzing-loader">
+                    <div class="spinner"></div>
+                    <p class="mt-small" style="color: var(--text-muted); font-size: 0.9rem;">Analisando suas respostas...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Passo 10: TELA FINAL -->
+        <section class="step" id="step-10">
+            <div class="content-wrapper text-center">
+                
+                <h1 class="title" style="margin-bottom:0.5rem;">Muito bem!</h1>
+                <p class="description final-text">Vejo que seu coração valoriza a constância e a paz, e que você compreende a necessidade dessa estrutura.</p>
+
+                <!-- IMAGEM DO GRUPO DO WHATSAPP (Ajustado o object-fit para não cortar e adicionado fundo) -->
+                <div class="whatsapp-group-photo text-center" style="margin-top:1.5rem; margin-bottom:1.5rem;">
+                    <img src="grupo-whatsapp.jpg" alt="Foto do Grupo do WhatsApp" onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg';" style="width: 120px; height: 120px; border-radius: 50%; border: 4px solid var(--bg-card); object-fit: contain; background-color: #fff; padding: 4px; box-shadow: 0 0 20px var(--accent-glow);">
+                    <p style="margin-top:0.8rem; font-weight: 500; font-size: 1.1rem; color: var(--accent);">Grupo Exclusivo Preparado</p>
+                </div>
+
+                <p class="description final-text highlight mb-large">Sua colaboração de <strong>15</strong> é suficiente para liberar o seu acesso à ferramenta e te colocar diretamente no nosso grupo organizado.</p>
+                
+                <button class="btn-primary pulse-animation" onclick="finishQuiz()">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg>
+                    Quero colaborar e entrar agora
+                </button>
+
+                <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 1rem;">Colaboração mensal. Acesso e mensagens constantes.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
