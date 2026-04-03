@@ -94,7 +94,7 @@ body {
 
 /* Typography */
 h1.title {
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: 500;
     margin-bottom: 1.5rem;
     color: var(--accent);
@@ -102,7 +102,7 @@ h1.title {
 }
 
 h2.question {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-weight: 500;
     margin-bottom: 2rem;
     line-height: 1.4;
@@ -110,7 +110,7 @@ h2.question {
 }
 
 p.description {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     line-height: 1.6;
     margin-bottom: 1.25rem;
     color: var(--text-muted);
@@ -156,7 +156,7 @@ p.highlight {
     border-radius: var(--border-radius-sm);
     padding: 1.15rem 1.25rem;
     color: var(--text-main);
-    font-size: 1.05rem;
+    font-size: 1.15rem;
     text-align: left;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -200,7 +200,7 @@ p.highlight {
     border: none;
     border-radius: var(--border-radius);
     padding: 1.25rem;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: 600;
     cursor: pointer;
     transition: var(--transition);
@@ -235,7 +235,7 @@ p.highlight {
 }
 
 .logic-box p {
-    font-size: 0.95rem;
+    font-size: 1.15rem;
     line-height: 1.6;
     color: var(--text-muted);
     font-style: italic;
