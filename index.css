@@ -102,11 +102,16 @@ h1.title {
 }
 
 h2.question {
-    font-size: 1.5rem;
-    font-weight: 500;
+    font-size: 1.35rem;
+    font-weight: 400;
     margin-bottom: 1.25rem;
-    line-height: 1.4;
+    line-height: 1.45;
     text-align: center;
+}
+
+h2.question strong {
+    font-weight: 500;
+    color: #fff;
 }
 
 p.description {
@@ -252,7 +257,7 @@ p.highlight {
 /* Responsive Adjustments for Shorter Screens */
 @media (max-height: 750px) {
     h1.title { font-size: 1.8rem; margin-bottom: 0.8rem; }
-    h2.question { font-size: 1.35rem; margin-bottom: 1rem; }
+    h2.question { font-size: 1.2rem; margin-bottom: 1rem; }
     p.description { font-size: 1.05rem; margin-bottom: 0.8rem; }
     .btn-option { padding: 0.75rem 1rem; font-size: 1.05rem; }
     .logic-box p { font-size: 1.05rem; }
