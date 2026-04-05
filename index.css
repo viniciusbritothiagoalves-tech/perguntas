@@ -308,3 +308,13 @@ p.highlight {
 @keyframes spin {
     to { transform: rotate(360deg); }
 }
+
+.btn-primary {
+    background-color: #1EBE5D !important; /* Verde WhatsApp */
+    color: #ffffff !important; /* Texto branco */
+    border: none !important;
+}
+
+.btn-primary:hover {
+    background-color: #17a74e !important; /* Verde mais escuro no hover */
+}
