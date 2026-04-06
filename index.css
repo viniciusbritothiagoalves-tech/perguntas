@@ -3,11 +3,11 @@
     --bg-main: #14171A;         
     --bg-card: #1E2226;         
     --bg-card-hover: #262B31;
-    --text-main: #F3F4F6;       
-    --text-muted: #9CA3AF;      
-    --accent: #E5B760;          
-    --accent-hover: #F2C778;
-    --accent-glow: rgba(229, 183, 96, 0.2);
+    --text-main: #FFFFFF; /* High contrast white */       
+    --text-muted: #D1D5DB; /* Lighter for better contrast */      
+    --accent: #FFC107; /* Bright amber for high visibility */          
+    --accent-hover: #FFD54F;
+    --accent-glow: rgba(255, 193, 7, 0.25);
     
     --border-radius: 16px;
     --border-radius-sm: 12px;
@@ -157,7 +157,7 @@ p.highlight {
 
 .btn-option {
     background-color: var(--bg-card);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(255, 255, 255, 0.15); /* Thicker border for visibility */
     border-radius: var(--border-radius-sm);
     padding: 0.85rem 1.25rem;
     color: var(--text-main);
@@ -186,9 +186,9 @@ p.highlight {
 }
 
 .btn-option.selected {
-    background-color: var(--accent-glow);
+    background-color: rgba(255, 193, 7, 0.15);
     border-color: var(--accent);
-    color: var(--accent);
+    color: #FFFFFF;
     transform: scale(0.98);
 }
 
@@ -201,12 +201,12 @@ p.highlight {
 .btn-primary {
     width: 100%;
     background-color: var(--accent);
-    color: #111;
+    color: #000000; /* Pure black text for maximum contrast */
     border: none;
     border-radius: var(--border-radius);
     padding: 1.25rem;
-    font-size: 1.2rem;
-    font-weight: 600;
+    font-size: 1.3rem; /* Slightly larger text */
+    font-weight: 700; /* Bolder text */
     cursor: pointer;
     transition: var(--transition);
     box-shadow: 0 4px 15px var(--accent-glow);
@@ -282,9 +282,9 @@ p.highlight {
 }
 
 @keyframes pulse {
-    0% { box-shadow: 0 0 0 0 rgba(229, 183, 96, 0.4); }
-    70% { box-shadow: 0 0 0 15px rgba(229, 183, 96, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(229, 183, 96, 0); }
+    0% { box-shadow: 0 0 0 0 rgba(255, 193, 7, 0.4); }
+    70% { box-shadow: 0 0 0 15px rgba(255, 193, 7, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 193, 7, 0); }
 }
 
 /* Loader */
@@ -307,14 +307,4 @@ p.highlight {
 
 @keyframes spin {
     to { transform: rotate(360deg); }
-}
-
-.btn-primary {
-    background-color: #1EBE5D !important; /* Verde WhatsApp */
-    color: #ffffff !important; /* Texto branco */
-    border: none !important;
-}
-
-.btn-primary:hover {
-    background-color: #17a74e !important; /* Verde mais escuro no hover */
 }
