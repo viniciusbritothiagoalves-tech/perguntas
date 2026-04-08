@@ -294,24 +294,44 @@ p.highlight {
     100% { box-shadow: 0 0 0 0 rgba(255, 193, 7, 0); }
 }
 
-/* Loader */
-.loader-container {
+/* Video specific styles */
+.video-step-wrapper {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 200px;
+    width: 100%;
 }
 
-.spinner {
-    width: 45px;
-    height: 45px;
-    border: 3px solid rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    border-top-color: var(--accent);
-    animation: spin 1s ease-in-out infinite;
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    border-radius: var(--border-radius-sm);
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+    margin-bottom: clamp(1.5rem, 4vh, 2rem);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-@keyframes spin {
-    to { transform: rotate(360deg); }
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.hidden-button-container {
+    display: none;
+    opacity: 0;
+}
+
+.fade-in-delayed {
+    animation: fadeInDelayed 1s ease forwards;
+}
+
+@keyframes fadeInDelayed {
+    0% { opacity: 0; transform: translateY(15px); }
+    100% { opacity: 1; transform: translateY(0); }
 }
