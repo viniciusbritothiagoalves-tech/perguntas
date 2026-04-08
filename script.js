@@ -1,6 +1,8 @@
 let currentStep = "1";
 const totalStepsNumbers = 4;
-const DELAY_MS = 90000; // 90 seconds in milliseconds
+const DELAY_MS = 210000; // 3 minutes and 30 seconds
+
+let timerStarted = false;
 
 function updateProgressBar(stepId) {
     let progress = 0;
@@ -28,10 +30,8 @@ function nextStep(step) {
         if(nextEl) {
             nextEl.classList.add('active');
             
-            // Start the timer for delayed button if we reach the final step
-            if (currentStep === "4") {
-                startDelayedButton();
-            }
+            // Timer will be started by the YouTube play event (onStateChange)
+            // No need to init manually here since YouTube API loads globally
         }
     }, 400);
 }
@@ -58,6 +58,9 @@ function selectOption(btn, stepId, nextStepId) {
 }
 
 function startDelayedButton() {
+    if (timerStarted) return;
+    timerStarted = true;
+
     setTimeout(() => {
         const delayedBtn = document.getElementById('delayed-button-container');
         if (delayedBtn) {
@@ -65,6 +68,20 @@ function startDelayedButton() {
             delayedBtn.classList.add('fade-in-delayed');
         }
     }, DELAY_MS);
+}
+
+let ytPlayer;
+function onYouTubeIframeAPIReady() {
+    ytPlayer = new YT.Player('youtube-player', {
+        events: {
+            'onStateChange': function(event) {
+                // event.data === 1 indicates the video is PLAYING
+                if (event.data === 1) {
+                    startDelayedButton();
+                }
+            }
+        }
+    });
 }
 
 function finishQuiz() {
