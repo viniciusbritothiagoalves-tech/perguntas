@@ -70,19 +70,7 @@ function startDelayedButton() {
     }, DELAY_MS);
 }
 
-let ytPlayer;
-function onYouTubeIframeAPIReady() {
-    ytPlayer = new YT.Player('youtube-player', {
-        events: {
-            'onStateChange': function(event) {
-                // event.data === 1 indicates the video is PLAYING
-                if (event.data === 1) {
-                    startDelayedButton();
-                }
-            }
-        }
-    });
-}
+// The timer is started natively below using the focus trick
 
 function finishQuiz() {
     // Redirect securely without intermediary pages
@@ -98,25 +86,12 @@ document.addEventListener("DOMContentLoaded", () => {
     if (delayedBtn) {
         delayedBtn.style.display = "none";
     }
-    
-    // Custom Video Overlay Logic
-    const vslOverlay = document.getElementById('vsl-overlay');
-    if (vslOverlay) {
-        vslOverlay.addEventListener('click', function() {
-            // Check if YouTube player is ready
-            if (ytPlayer && typeof ytPlayer.playVideo === 'function') {
-                ytPlayer.playVideo();
-                this.style.display = 'none';
-            } else {
-                // Wait for it if clicked too fast
-                let waitForYT = setInterval(() => {
-                    if (ytPlayer && typeof ytPlayer.playVideo === 'function') {
-                        ytPlayer.playVideo();
-                        vslOverlay.style.display = 'none';
-                        clearInterval(waitForYT);
-                    }
-                }, 200);
-            }
-        });
-    }
+// Wait for user to interact with the iframe to start the timer reliably locally/web
+    window.addEventListener('blur', () => {
+        const activeEl = document.activeElement;
+        // If the focused element after clicking is our iframe
+        if (currentStep === "4" && activeEl && activeEl.id === 'youtube-player') {
+            startDelayedButton();
+        }
+    });
 });
