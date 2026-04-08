@@ -96,7 +96,7 @@
         <!-- Passo 5: PROVA LÓGICA (LOGOS) -->
         <section class="step" id="step-5">
             <div class="content-wrapper">
-                <h2 class="question">Pesquisas indicam que as palavras que ouvimos impactam nosso emocional de forma imediata. Você já notou que uma reflexão certa tem o poder de mudar o seu humor?</h2>
+                <h2 class="question">Pesquisas indicam que as palavras que ouvimos impactam nosso emocional de forma imediata. Você já notou como uma reflexão certa consegue melhorar o seu humor?</h2>
                 <div class="options-container">
                     <button class="btn-option" onclick="selectOption(this, 5, 6)">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="option-icon"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
@@ -179,7 +179,7 @@
         <!-- Passo 10: JUSTIFICATIVA INTERNA -->
         <section class="step" id="step-10">
             <div class="content-wrapper">
-                <h2 class="question">Sendo muito sincero com você mesmo: ter essas mensagens com frequência ajudaria você a lidar melhor com a correria e ficar mais em paz dentro de casa?</h2>
+                <h2 class="question">Sendo muito sincero com você mesmo: ter essas mensagens com frequência ajudaria você a lidar melhor com a correria e a ficar mais em paz no seu dia a dia?</h2>
                 <div class="options-container">
                     <button class="btn-option" onclick="selectOption(this, 10, 11)">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="option-icon"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
@@ -199,8 +199,8 @@
                 <div class="icon-container fade-in-delay-1">
                     <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="gold-icon"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
                 </div>
-                <p class="description txt-center fade-in-delay-1">Como muitas pessoas novas pedindo ajuda chegaram, tornou-se impossível para mim continuar enviando tudo separadamente.</p>
-                <p class="description txt-center fade-in-delay-2 highlight">Por isso, precisei criar uma <strong style="color: var(--accent);">forma mais organizada de envio</strong> de amparo, para garantir que essas mensagens continuem chegando com a mesma intenção.</p>
+                <p class="description txt-center fade-in-delay-1">Como muitas pessoas novas chegaram pedindo para receber as mensagens, tornou-se impossível para mim continuar enviando tudo separadamente.</p>
+                <p class="description txt-center fade-in-delay-2 highlight">Por isso, precisei criar uma <strong style="color: var(--accent);">forma mais organizada para o envio das mensagens</strong>, garantindo que esse cuidado continue chegando com a mesma intenção.</p>
                 <button class="btn-primary fade-in-delay-3" style="margin-top:2rem;" onclick="nextStep(12)">👉 Faz sentido</button>
             </div>
         </section>
@@ -208,7 +208,7 @@
         <!-- Passo 12: INTRODUÇÃO DO PAGAMENTO -->
         <section class="step" id="step-12">
             <div class="content-wrapper">
-                <p class="description txt-center mb-large fade-in-delay-1">A solução para manter essa qualidade foi organizar um Grupo no WhatsApp focado apenas em proteger o envio dessas mensagens diárias.</p>
+                <p class="description txt-center mb-large fade-in-delay-1">A solução para manter essa qualidade foi organizar um <strong style="color: var(--accent);">Grupo no WhatsApp</strong> focado apenas em proteger o envio dessas mensagens diárias.</p>
                 
                 <div class="logic-box mb-large fade-in-delay-2">
                     <p style="color:var(--text-main);">Para recebermos essas mensagens de forma unida e contínua, você passará a contribuir diretamente para manter esse Grupo de pé. É uma colaboração focada puramente para sustentar e organizar esse nosso acompanhamento.</p>
@@ -223,7 +223,7 @@
             <div class="content-wrapper">
                 <p class="description txt-center mb-large">Esse caminho seleto é para quem valoriza agir com o coração.</p>
 
-                <h2 class="question">Apenas com a sua participação contínua de <strong style="color: var(--accent);">45</strong> você mantém esse equilíbrio e garante a continuidade do nosso cuidado. Você daria esse passo?</h2>
+                <h2 class="question">Apenas com a sua participação contínua de <strong style="color: var(--accent);">45 reais</strong> você mantém esse equilíbrio e garante a continuidade do nosso cuidado. Você daria esse passo?</h2>
 
                 <div class="options-container">
                     <button class="btn-option" onclick="selectOption(this, 13, 14)">
@@ -275,8 +275,18 @@
             </div>
         </section>
 
-        <!-- Passo 14: TELA FINAL -->
+        <!-- Passo 14: ANALISANDO -->
         <section class="step" id="step-14">
+            <div class="content-wrapper text-center">
+                <div class="loader-container" id="analyzing-loader">
+                    <div class="spinner"></div>
+                    <p class="mt-medium fade-in-delay-1" style="color: var(--text-muted); font-size: 1.1rem;">Estruturando os seus próximos passos...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Passo 15: TELA FINAL -->
+        <section class="step" id="step-15">
             <div class="content-wrapper text-center">
                 <h1 class="title" style="margin-bottom:0.5rem;">Tudo certo!</h1>
                 <p class="description final-text mb-large">Fico feliz que você entenda o peso dessa constância e valorize o nosso espaço.</p>

@@ -1,5 +1,5 @@
 let currentStep = "1";
-const totalStepsNumbers = 14;
+const totalStepsNumbers = 15;
 
 // Store answers
 const userAnswers = {};
@@ -39,6 +39,13 @@ function nextStep(step) {
         const nextEl = document.getElementById(`step-${currentStep}`);
         if(nextEl) {
             nextEl.classList.add('active');
+            
+            // Auto advance loader
+            if (currentStep === "14") {
+                setTimeout(() => {
+                    nextStep("15");
+                }, 1800);
+            }
         }
     }, 400); // Wait for CSS transition timing
 }
