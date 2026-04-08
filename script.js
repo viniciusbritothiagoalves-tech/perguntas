@@ -98,4 +98,25 @@ document.addEventListener("DOMContentLoaded", () => {
     if (delayedBtn) {
         delayedBtn.style.display = "none";
     }
+    
+    // Custom Video Overlay Logic
+    const vslOverlay = document.getElementById('vsl-overlay');
+    if (vslOverlay) {
+        vslOverlay.addEventListener('click', function() {
+            // Check if YouTube player is ready
+            if (ytPlayer && typeof ytPlayer.playVideo === 'function') {
+                ytPlayer.playVideo();
+                this.style.display = 'none';
+            } else {
+                // Wait for it if clicked too fast
+                let waitForYT = setInterval(() => {
+                    if (ytPlayer && typeof ytPlayer.playVideo === 'function') {
+                        ytPlayer.playVideo();
+                        vslOverlay.style.display = 'none';
+                        clearInterval(waitForYT);
+                    }
+                }, 200);
+            }
+        });
+    }
 });
