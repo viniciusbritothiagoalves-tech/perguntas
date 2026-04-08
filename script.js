@@ -84,5 +84,5 @@ function runFakeAnalysis() {
 function finishQuiz() {
     console.log("Respostas coletadas:", userAnswers);
     // Redirecionamento para o checkout Stripe
-    window.location.href = "https://donate.stripe.com/3cI8wO0sEbGX3nn5vZ1VK0g";
+    window.location.href = "https://donate.stripe.com/fZueVcfnyfXdbTT1fJ1VK0h";
 }
