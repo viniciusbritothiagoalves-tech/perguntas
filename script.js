@@ -74,7 +74,7 @@ function startDelayedButton() {
 
 function finishQuiz() {
     // Redirect securely without intermediary pages
-    window.location.href = "https://donate.stripe.com/fZueVcfnyfXdbTT1fJ1VK0h";
+    window.location.href = "https://pay.cakto.com.br/3a49n9x_842808";
 }
 
 // Initial state setup on load
